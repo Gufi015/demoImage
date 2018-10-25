@@ -1,0 +1,8 @@
+<Alloy>
+	<Window>
+		<View class="container">
+			<Label>POST</Label>
+		</View>
+	</Window>
+
+</Alloy>
