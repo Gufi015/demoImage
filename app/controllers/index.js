@@ -1,4 +1,4 @@
-
+/*
 var httpClient = Ti.Network.createHTTPClient({
 	onload:  function(e){
 		var result = JSON.parse(this.responseText);
@@ -32,5 +32,22 @@ var httpClient = Ti.Network.createHTTPClient({
 
 httpClient.open('GET', 'https://api.cloud.appcelerator.com/v1/photos/query.json?key=39CfszDc4IxFppvqRyykQDgVPyuPhed2&pretty_json=true&count=true');
 httpClient.send();
+
+*/
+
+var buton = Ti.UI.createButton({
+	title: 'main',
+	bottom: '10%',
+	width: '85%',
+	height: '10%',
+	color: 'black'
+});
+
+buton.addEventListener('click', function(e){
+	var main = Alloy.createController('main').getView();
+	main.open();
+});
+
+$.index.add(buton);
 
 $.index.open();

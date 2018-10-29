@@ -1,7 +1,7 @@
 <Alloy>
 	<Window>
-		<View class="container">
-			<Label>POST</Label>
+		<View id="viewInfo"class="container">
+			
 		</View>
 	</Window>
 
