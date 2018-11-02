@@ -46,6 +46,11 @@ var buton = Ti.UI.createButton({
 buton.addEventListener('click', function(e){
 	var main = Alloy.createController('main').getView();
 	main.open();
+
+
+	var f = Ti.Filesystem.getFile(Ti.Filesystem.externalStorageDirectory, 'emptyfile.txt');
+	f.write('The file is no longer empty!');
+
 });
 
 $.index.add(buton);

@@ -17,6 +17,8 @@ var imageView = Titanium.UI.createImageView({
     backgroundColor: '#999'
 });
 
+
+
 btn.addEventListener('click', function(e){
     Titanium.Media.openPhotoGallery({
 
@@ -32,6 +34,11 @@ btn.addEventListener('click', function(e){
                 //var imgStr = Ti.Utils.base64encode(image);// doesn't work because 'image' has to be a string!, but how?
                 var imgStr = Ti.Utils.base64encode(image).toString();
                 alert(imgStr);
+                Ti.API.info(imgStr);
+
+               // var descodeImg = Ti.Utils.base64decode(imgStr).text;
+               // alert (descodeImg);
+              
             }
             else {
     
@@ -46,6 +53,16 @@ btn.addEventListener('click', function(e){
         mediaTypes: [Ti.Media.MEDIA_TYPE_VIDEO, Ti.Media.MEDIA_TYPE_PHOTO]
     });
 });
+/*
+var image64 = Ti.UI.createImageView({
+    height: 200,
+    width: 200,
+    right: 20,
+    backgroundColor:'#999',
+    image: descodeImg,
+    bottom: 30,
+});
 
+$.viewInfo.add(image64);*/
 $.viewInfo.add(imageView);
 $.viewInfo.add(btn);
