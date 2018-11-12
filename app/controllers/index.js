@@ -37,7 +37,7 @@ httpClient.send();
 
 var buton = Ti.UI.createButton({
 	title: 'main',
-	bottom: '10%',
+	bottom: 10,
 	width: '85%',
 	height: '10%',
 	color: 'black'
@@ -46,13 +46,23 @@ var buton = Ti.UI.createButton({
 buton.addEventListener('click', function(e){
 	var main = Alloy.createController('main').getView();
 	main.open();
-
-
-	var f = Ti.Filesystem.getFile(Ti.Filesystem.externalStorageDirectory, 'emptyfile.txt');
+	var f = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, 'emptyfile.txt');
 	f.write('The file is no longer empty!');
 
 });
-
 $.index.add(buton);
+
+var buton2 = Ti.UI.createButton({
+	title: 'spotify',
+	bottom: 10,
+	right: 10,
+
+});
+$index.add(buton2);
+
+buton2.addEventListener('click', function(e){
+	var spotify = Alloy.createController('spotify').getView();
+	spotify.open();
+});
 
 $.index.open();
