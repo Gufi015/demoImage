@@ -58,7 +58,7 @@ var buton2 = Ti.UI.createButton({
 	right: 10,
 
 });
-$index.add(buton2);
+$.index.add(buton2);
 
 buton2.addEventListener('click', function(e){
 	var spotify = Alloy.createController('spotify').getView();

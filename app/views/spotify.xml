@@ -1,5 +1,5 @@
 <Alloy>
-	<Window>
+	<Window backgroundColor="white" layout="vertical">
 		<View id="container">
 
 		</View>
